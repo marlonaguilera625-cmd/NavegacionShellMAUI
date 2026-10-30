@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell x:Class="NavegacionShellMAUI.AppShell" xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:NavegacionShellMAUI.Views" Title="Navegación Académica" FlyoutBehavior="Flyout" FlyoutBackgroundColor="{AppThemeBinding Light={StaticResource Surface}, Dark={StaticResource Secondary}}" Shell.NavBarHasShadow="False">
+ <Shell.FlyoutHeader><Grid BackgroundColor="#12304A" Padding="22" HeightRequest="112"><VerticalStackLayout VerticalOptions="Center" Spacing="4"><Label Text="NAVEGACIÓN ACADÉMICA" TextColor="White" FontSize="17" FontAttributes="Bold"/><Label Text="Presentación 4 · Shell Navigation" TextColor="#B9D9E5" FontSize="13"/></VerticalStackLayout></Grid></Shell.FlyoutHeader>
+ <FlyoutItem Title="Inicio" Route="inicio" Icon="dotnet_bot.png"><Tab><ShellContent Title="Inicio" Route="inicio-tab" x:Name="InicioContent"/></Tab></FlyoutItem>
+ <FlyoutItem Title="Cursos" Route="cursos" Icon="dotnet_bot.png"><Tab><ShellContent Title="Cursos" Route="cursos-tab" x:Name="CursosContent"/></Tab></FlyoutItem>
+ <FlyoutItem Title="Perfil" Route="perfil" Icon="dotnet_bot.png"><Tab><ShellContent Title="Perfil" Route="perfil-tab" x:Name="PerfilContent"/></Tab></FlyoutItem>
+ <ShellItem Route="acerca"><ShellContent Title="Acerca de" Route="acercade" ContentTemplate="{DataTemplate views:AcercaDePage}"/></ShellItem>
+ <MenuItem Text="Salir" IconImageSource="dotnet_bot.png" Clicked="SalirClicked"/>
+</Shell>
+
